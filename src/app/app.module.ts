@@ -15,6 +15,7 @@ import { PrivacypolicyComponent } from './components/pages/privacypolicy/privacy
 import { TermsandconditionsComponent } from './components/pages/termsandconditions/termsandconditions.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
