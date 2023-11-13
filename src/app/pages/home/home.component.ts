@@ -38,11 +38,6 @@ export class HomeComponent {
     autoplaySpeed: 2000
   };
 
-
-  removeSlide() {
-    this.clientTestomonials.length = this.clientTestomonials.length - 1;
-  }
-
   slickInit(e: any) {
     console.log('slick initialized');
   }
