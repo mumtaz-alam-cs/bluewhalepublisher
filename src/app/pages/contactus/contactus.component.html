@@ -21,9 +21,9 @@
             </div>
             <!-- <div class="col-sm-6">
           <div class="bnr-side-img wow bounceInRight" data-wow-delay="300ms">
-            <img src="images/bnr-side-img2.png">
+            <img src="assets/images/bnr-side-img2.png">
             <p class="ply-icon-st">
-              <img class="ply-img" src="images/play-icon.png">
+              <img class="ply-img" src="assets/images/play-icon.png">
               Watch Video
             </p>
           </div>
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="client-logo wow fadeInUp" data-wow-delay="300ms">
-                    <img src="images/logo-img-client.png">
+                    <img src="assets/images/logo-img-client.png">
                 </div>
             </div>
         </div>
@@ -56,34 +56,30 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-6 col-xs-12">
                 <div class="cnform">
-                    <form class="clearfix" action="/mail" method="post">
+                    <form class="clearfix" [formGroup]="contactForm" (ngSubmit)="submitContact()">
                         <div class="col-sm-12">
                             <div class="field phone">
-                                <!-- <label>Name</label> -->
-                                <input type="text" name="cn" maxlength="60" value="" class="required alphanumeric iecn"
-                                    required="" placeholder="Name">
+                                <input type="text" name="cn" maxlength="60" class="required alphanumeric iecn" required
+                                    placeholder="Name" formControlName="name">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="field">
-                                <!-- <label>Email</label> -->
-                                <input type="email" name="em" maxlength="60" value="" class="required email" required=""
-                                    placeholder="Email">
+                                <input type="email" name="em" maxlength="60" class="required email" required
+                                    placeholder="Email" formControlName="email">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="field">
-                                <!-- <label>Phone</label> -->
-                                <input type="number" maxlength="25" minlength="7" name="pn" value=""
-                                    class="required number" required="" placeholder="Phone">
+                                <input type="number" maxlength="25" minlength="7" name="pn" class="required number"
+                                    required placeholder="Phone" formControlName="phone">
                             </div>
                         </div>
 
                         <div class="col-sm-12">
                             <div class="field">
-                                <!-- <label>Message</label> -->
-                                <textarea name="msg" class="required iemsg" rows="4" required=""
-                                    placeholder="Message"></textarea>
+                                <textarea name="msg" class="required iemsg" rows="4" required placeholder="Message"
+                                    formControlName="message"></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -95,36 +91,12 @@
                                         href="privacy-policy.php">Privacy Policy.</a> </label>
                             </div>
                         </div>
-                        <div class="clearfix fieldwrap text-center">
-                            <input type="submit" class="btn-validate cntct-btn" value="Submit">
-                            <input type="hidden" id="lead_area_popup" name="lead_area" value="for $100">
-                            <input type="hidden" id="lead_org_price" name="lead_org_price" value="">
-                            <input type="hidden" name="send" value="1">
-                            <!-- Email Source -->
-                            <input type="hidden" name="lb_source" value="">
-                            <input type="hidden" name="lb_source_cat" value="">
-                            <input type="hidden" name="lb_source_nam" value="">
-                            <input type="hidden" name="lb_source_ema" value="">
-                            <input type="hidden" name="lb_source_con" value="">
-                            <input type="hidden" name="lb_source_pho" value="">
-                            <input type="hidden" name="lb_source_off" value="">
-                            <!-- Customer Info -->
-                            <input type="hidden" name="fullpageurl" value="">
-                            <input type="hidden" name="pageurl" value="www.silicongraphics.ae/lp/mobile-app/">
-                            <!-- ip2Location -->
-                            <input type="hidden" name="ip2loc_ip" value="110.93.244.176">
-                            <input type="hidden" name="ip2loc_isp" value="TW RO">
-                            <input type="hidden" name="ip2loc_org" value="TRANSWORLD ASSOCIATES (PVT) LIMITED">
-                            <input type="hidden" name="ip2loc_country" value="Pakistan">
-                            <input type="hidden" name="ip2loc_region" value="Sindh">
-                            <input type="hidden" name="ip2loc_city" value="Karachi">
-                            <input type="hidden" name="service_id" value="5730" class="service_id">
-                        </div>
                         <div class="customalert"
                             style="background: rgb(255, 255, 255); color: red; text-align: center; font-size: 16px; width: 100%; margin: 10px 0px 0px; padding: 10px; float: left; display: none">
                         </div>
+                        <button type="submit">Submit</button>
                     </form>
-                    <!-- <p class="p-bottom">*Discount applies to New Projects Development Only </p> -->
+
                 </div>
             </div>
             <div class="col-sm-3"></div>
@@ -188,7 +160,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="edit-img  wow bounceInRight" data-wow-delay="600ms">
-                        <img src="images/wri-edi-simg.png">
+                        <img src="assets/images/wri-edi-simg.png">
                     </div>
                 </div>
             </div>
@@ -204,12 +176,6 @@
                     we ensure to fulfill the <br> following commitments towards our clients;</p>
             </div>
             <div class="core-main">
-                <!-- <div class="col-md-4 core-img-center no-padding">
-         <div class="bg_circle"> <img src="images/resume/resume_types_01.jpg" alt=""> </div>
-         
-         </div>
-         
-         -->
                 <div class="col-md-3"></div>
                 <div class="col-md-4 core-left ">
                     <div class="core-details wow bounceIn">
@@ -281,15 +247,14 @@
                     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
                         (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
                         (beforeChange)="beforeChange($event)">
-                        <div ngxSlickItem
-                            *ngFor="let slide of contactTestomonials; trackBy: trackByContactTestomonialsl"
+                        <div ngxSlickItem *ngFor="let slide of contactTestimonials; trackBy: trackByContactTestimonials"
                             class="col-sm-12 slide">
                             <div class="testi-box">
                                 <img src="{{ slide.thumbnail }}" />
                                 <div class="testi-text">
                                     <h4>{{slide.title}}</h4>
                                     <p>
-                                        {{slide.desciption}}
+                                        {{slide.description}}
                                     </p>
                                     <div class="author-name">
                                         <div class="aut-nm">
@@ -300,7 +265,7 @@
                                             <h5>{{slide.name}}</h5>
                                         </div>
                                         <div class="autor-trust">
-                                            <img src="{{ slide.autorTrust }}" />
+                                            <img src="{{ slide.authorTrust }}" />
                                         </div>
                                     </div>
                                 </div>

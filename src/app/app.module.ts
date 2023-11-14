@@ -29,6 +29,8 @@ import { BookIllustrationComponent } from './pages/services/book-illustration/bo
 import { ProofreadingComponent } from './pages/services/proofreading/proofreading.component';
 import { ArticleWritingPublicationComponent } from './pages/services/article-writing-publication/article-writing-publication.component';
 import { BookPrintingComponent } from './pages/services/book-printing/book-printing.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,9 @@ import { BookPrintingComponent } from './pages/services/book-printing/book-print
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     {
