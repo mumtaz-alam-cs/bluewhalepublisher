@@ -42,6 +42,12 @@ const routes: Routes = [
     path: 'privacy-policy',
     component: PrivacyPolicyComponent
   },
+  // { path: '**', component: TermsAndConditionsComponent },
+  {
+    path: 'services',
+    loadChildren: () => import('./services/services.module').then(x => x.ServicesModule)
+  },
+
 ];
 
 @NgModule({

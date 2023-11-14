@@ -1,58 +1,78 @@
 <div class="header_main_sec">
-   <div class="">
-     <div class="container-fluid">
-       <div class="">
-         <div class="header_navbar">
-           <div class="col-sm-2">
-             <div class="logo">
-               <a routerLink="home"> 
-                  <img src="assets/images/logo.png" class="" alt="">
-               </a> 
+  <div class="">
+    <div class="container-fluid">
+      <div class="">
+        <div class="header_navbar">
+          <div class="col-sm-2">
+            <div class="logo">
+              <a routerLink="home">
+                <img src="assets/images/logo.png" class="" alt="">
+              </a>
             </div>
-           </div>
-           <div class="col-sm-10">
-             <nav class="navbar navbar_custom">
-               <div class="">
-                 <div class="navbar-header">
-                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                 </div>
-                 <div class="collapse navbar-collapse" id="myNavbar">
-                   <ul class="nav navbar-nav">
-                     <li><a routerLink="home" routerLinkActive="active">Home </a></li>
-                     <li><a routerLink="aboutus" routerLinkActive="active"> About </a></li>
-                     <li class="dropdown dropdown-toggle"><a class="mar-st-drop" href="javascript:;">Services</a>
-                     <ul id="products-menu" class="dropdown-menu clearfix" role="menu">
-                       <li><a href="ebook-writing.html" ><img src="assets/images/drop-icon-1.png">E-Book Writing</a></li>
-                       <li><a href="book-cover.html" ><img src="assets/images/drop-icon-2.png">Cover Design</a></li>
-                       <li><a href="book-video.html" ><img src="assets/images/drop-icon-3.png">Book Video Trailer</a></li>
-                       <li><a href="marketing.html" ><img src="assets/images/drop-icon-4.png">Book Marketing</a></li>
-                       <li><a href="publishing.html" ><img src="assets/images/drop-icon-5.png">Book Publishing</a></li>
-                       <li><a href="ebook-ghostwriting.html" ><img src="assets/images/drop-icon-5.png">eBook Ghostwriting</a></li>
-                       <li><a href="audio-books.html" ><img src="assets/images/drop-icon-7.png">Audio Books</a></li>
-                       <li><a href="web-design-seo.html" ><img src="assets/images/drop-icon-8.png">Web Design Seo</a></li>
-                       <li><a href="book-illustration.html" ><img src="assets/images/drop-icon-9.png">Book illustration</a></li>
-                       <li><a href="proofreading.html" ><img src="assets/images/drop-icon-10.png">Proofreading</a></li>
-                       <li><a href="article-writing-publication.html" ><img src="assets/images/drop-icon-11.png">Article Publication</a></li>
-                       <li><a href="book-printing.html" ><img src="assets/images/drop-icon-12.png">Book Printing</a></li>
-                     </ul>
-                   </li>
-                   
-                   <li><a routerLink="testimonials" routerLinkActive="active"> Testimonials</a></li>
-                   <li><a routerLink="contactus" routerLinkActive="active"> Contact us</a></li>
-                   <li class="suport-btn-hdr"><a href="support-center.html"> Help/ Support Center</a></li>
-                   
-                 </ul>
-               </div>
-             </div>
-           </nav>
-           <div class="navbar_custom_num">
-             <div class="edi-btn-st">
-               <div class="edit-call"> <a href="tel:(254) 500-3042 ">Toll Free <span>-</span>{{companyContact}} </a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+          </div>
+          <div class="col-sm-10">
+            <nav class="navbar navbar_custom">
+              <div class="">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span
+                      class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li><a routerLink="home" routerLinkActive="active">Home </a></li>
+                    <li><a routerLink="aboutus" routerLinkActive="active"> About </a></li>
+                    <li class="dropdown dropdown-toggle"><a class="mar-st-drop" href="javascript:;">Services</a>
+                      <ul id="products-menu" class="dropdown-menu clearfix" role="menu">
+                        <li><a [routerLink]="'/services/ebook-writing'"><img src="assets/images/drop-icon-1.png">E-Book
+                            Writing</a></li>
+                        <li><a [routerLink]="'/services/book-cover'"><img src="assets/images/drop-icon-2.png">Cover
+                            Design</a></li>
+                        <li><a [routerLink]="'/services/book-video'"><img src="assets/images/drop-icon-3.png">Book
+                            Video Trailer</a>
+                        </li>
+                        <li><a [routerLink]="'/services/marketing'"><img src="assets/images/drop-icon-4.png">Book
+                            Marketing</a></li>
+                        <li><a [routerLink]="'/services/publishing'"><img src="assets/images/drop-icon-5.png">Book
+                            Publishing</a></li>
+                        <li><a [routerLink]="'/services/ebook-ghostwriting'"><img
+                              src="assets/images/drop-icon-5.png">eBook
+                            Ghostwriting</a></li>
+                        <li><a [routerLink]="'/services/audio-books'"><img src="assets/images/drop-icon-7.png">Audio
+                            Books</a></li>
+                        <li><a [routerLink]="'/services/web-design-seo'"><img src="assets/images/drop-icon-8.png">Web
+                            Design Seo</a>
+                        </li>
+                        <li><a [routerLink]="'/services/book-illustration'"><img
+                              src="assets/images/drop-icon-9.png">Book
+                            illustration</a></li>
+                        <li><a [routerLink]="'/services/proofreading'"><img
+                              src="assets/images/drop-icon-10.png">Proofreading</a></li>
+                        <li><a [routerLink]="'/services/article-writing-publication'"><img
+                              src="assets/images/drop-icon-11.png">Article
+                            Publication</a></li>
+                        <li><a [routerLink]="'/services/book-printing'"><img src="assets/images/drop-icon-12.png">Book
+                            Printing</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li><a routerLink="testimonials" routerLinkActive="active"> Testimonials</a></li>
+                    <li><a routerLink="contactus" routerLinkActive="active"> Contact us</a></li>
+                    <li class="suport-btn-hdr"><a href="support-center.html"> Help/ Support Center</a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="navbar_custom_num">
+              <div class="edi-btn-st">
+                <div class="edit-call"> <a href="tel:(254) 500-3042 ">Toll Free <span>-</span>{{companyContact}}
+                  </a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

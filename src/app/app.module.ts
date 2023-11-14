@@ -16,6 +16,19 @@ import { TermsandconditionsComponent } from './components/pages/termsandconditio
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { EbookWritingComponent } from './pages/services/ebook-writing/ebook-writing.component';
+import { BookCoverComponent } from './pages/services/book-cover/book-cover.component';
+import { BookVideoComponent } from './pages/services/book-video/book-video.component';
+import { MarketingComponent } from './pages/services/marketing/marketing.component';
+import { PublishingComponent } from './pages/services/publishing/publishing.component';
+import { EbookGhostwritingComponent } from './pages/services/ebook-ghostwriting/ebook-ghostwriting.component';
+import { AudioBooksComponent } from './pages/services/audio-books/audio-books.component';
+import { WebDesignSeoComponent } from './pages/services/web-design-seo/web-design-seo.component';
+import { BookIllustrationComponent } from './pages/services/book-illustration/book-illustration.component';
+import { ProofreadingComponent } from './pages/services/proofreading/proofreading.component';
+import { ArticleWritingPublicationComponent } from './pages/services/article-writing-publication/article-writing-publication.component';
+import { BookPrintingComponent } from './pages/services/book-printing/book-printing.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +44,31 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     PrivacypolicyComponent,
     TermsandconditionsComponent,
     PrivacyPolicyComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    EbookWritingComponent,
+    BookCoverComponent,
+    BookVideoComponent,
+    MarketingComponent,
+    PublishingComponent,
+    EbookGhostwritingComponent,
+    AudioBooksComponent,
+    WebDesignSeoComponent,
+    BookIllustrationComponent,
+    ProofreadingComponent,
+    ArticleWritingPublicationComponent,
+    BookPrintingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
