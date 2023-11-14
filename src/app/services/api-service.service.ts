@@ -12,7 +12,10 @@ export class ApiServiceService {
 
   createCompany = (name: string, email: string, phone: string, message: string): Observable<string> => {
     const payload = {
-
+      name,
+      email,
+      phone,
+      message,
     }
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
