@@ -8,8 +8,8 @@
             <li><a routerLink="aboutus">About</a></li>
             <li><a routerLink="testimonials">Reviews</a></li>
             <li><a routerLink="contactus">Contact Us</a></li>
-            <li><a href="news.html">Newsroom</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
+            <!-- <li><a href="news.html">Newsroom</a></li> -->
+            <!-- <li><a href="blog/index.html">Blog</a></li> -->
           </ul>
           <div class="clearfix"></div>
           <ul class="contct_details_mm" style="margin-top: 20px;">
@@ -23,15 +23,34 @@
         </div>
         <div class="social-link">
           <ul>
-            <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"> <img src="#" /> </a></li>
-            <li class="trust-box"><a href="#" target="_blank"><img src="assets/images/trustpilot-icon-2-copy.png"></a>
+            <li>
+              <a href={{socialLinks.facebook}} target="_blank">
+                <!-- <i class="fa fa-facebook-f" aria-hidden="true"></i> -->
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
             </li>
-            <li><a href="#" target="_blank"><img src="assets/images/bark-icon-2.png"></a> </li>
-            <li><a href="#" target="_blank"><img src="assets/images/review-icon-2.png"></a></li>
+            <li>
+              <a href={{socialLinks.instagram}} target="_blank">
+                <!-- <i class="fa fa-instagram" aria-hidden="true"></i> -->
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href={{socialLinks.pintrest}} target="_blank">
+                <!-- <i class="fa fa-pinterest-p" aria-hidden="true"></i> -->
+                <i class="fa-brands fa-pinterest-p"></i>
+              </a>
+            </li>
+            <li class="trust-box">
+              <a href={{socialLinks.trustpolit}} target="_blank">
+                <img src="assets/images/trustpilot-icon-2-copy.png" />
+              </a>
+            </li>
+            <li>
+              <a href={{socialLinks.bark}} target="_blank">
+                <img src="assets/images/bark-icon-2.png" />
+              </a> 
+            </li>
           </ul>
         </div>
       </div>
@@ -49,18 +68,18 @@
               </span>
             </div>
           </form>
-          <a href="#" title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img
-              src="../images.dmca.com/Badges/_dmca_premi_badge_5d66a.png?ID=0c0535f8-aa02-4aa8-b3ef-c5b6ad472757"
+          <a href="https://www.dmca.com/Protection/Status.aspx?ID=0c0535f8-aa02-4aa8-b3ef-c5b6ad472757&refurl=https://bluewhalepublishers.com/" title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img
+              src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=0c0535f8-aa02-4aa8-b3ef-c5b6ad472757"
               alt="DMCA.com Protection Status" /></a>
           <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-          <script src="../images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
         </div>
       </div>
       <div class="col-sm-12 copyright-div">
         <div class="col-sm-7">
           <div class="copy-txt">
             <p>Copyright ©
-              <script> document.write((new Date()).getFullYear()) </script>. Online Book Writers. All Right Reserved.
+              <script> document.write((new Date()).getFullYear()) </script>. Blue Whale Publishers. All Right Reserved.
             </p>
           </div>
         </div>
