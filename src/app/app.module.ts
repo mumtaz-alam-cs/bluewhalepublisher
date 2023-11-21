@@ -31,6 +31,7 @@ import { ArticleWritingPublicationComponent } from './pages/services/article-wri
 import { BookPrintingComponent } from './pages/services/book-printing/book-printing.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     BookIllustrationComponent,
     ProofreadingComponent,
     ArticleWritingPublicationComponent,
-    BookPrintingComponent
+    BookPrintingComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

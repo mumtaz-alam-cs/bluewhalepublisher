@@ -1,0 +1,56 @@
+<div class="overlay-bg-new-popup"></div>
+<div class="popupform-main-new-popup" style="display: none;">
+
+    <div class="pop-form-new-popp ta-center-new-pop">
+        <a (click)="closePopup()" class="close-btn ta-center">X</a>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="popup-side-img">
+                    <img src="assets/images/gril-pop.png">
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+                <div id="pop-form-new-popp" class="col-sm-12">
+                    <h6>Top-Tier<span>Bookwriters At 50% Off</span></h6>
+                    <form action="/mail" method="POST">
+
+                        <input type="text" name="cn" placeholder="Enter Name" required="">
+                        <input type="email" name="em" placeholder="Enter Email" required="">
+                        <input type="number" name="pn" placeholder="Enter Phone" required="">
+                        <textarea name="msg" placeholder="Tell us about your project" required=""></textarea>
+
+                        <button type="submit">Activate Now
+
+                            <input type="hidden" name="send" value="1" />
+                            <input type="hidden" id="lead_area_popup" name="lead_area" value="for $19">
+                            <input type="hidden" id="lead_org_price" name="lead_org_price" value="19">
+                            <input type="hidden" name="send" value="1">
+                            <input type="hidden" name="service_id" value="5844" class="service_id">
+
+                            <input type="hidden" name="lb_source" value="" />
+                            <input type="hidden" name="lb_source_cat" value="" />
+                            <input type="hidden" name="lb_source_nam" value="" />
+                            <input type="hidden" name="lb_source_ema" value="" />
+                            <input type="hidden" name="lb_source_con" value="" />
+                            <input type="hidden" name="lb_source_pho" value="" />
+                            <input type="hidden" name="lb_source_off" value="" />
+
+                            <input type="hidden" name="fullpageurl" value="" />
+                            <input type="hidden" name="pageurl" value="" />
+
+                            <input type="hidden" name="ip2loc_ip" value="" />
+                            <input type="hidden" name="ip2loc_isp" value="" />
+                            <input type="hidden" name="ip2loc_org" value="" />
+                            <input type="hidden" name="ip2loc_country" value="" />
+                            <input type="hidden" name="ip2loc_region" value="" />
+
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
