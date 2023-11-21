@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var $: any; // Declare $ for jQuery
 
 @Component({
   selector: 'app-ebook-writing',
@@ -57,4 +58,11 @@ export class EbookWritingComponent {
   trackByEbookWriting = (index: number, item: any) => {
     return item.id;
   }
+
+  ngAfterViewInit() {
+    $(document).ready(function () {
+      $('.fancybox').fancybox();
+    });
+  }
+
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { appConstant } from 'src/app/helpers/appConstant';
 
+declare var $: any; // Declare $ for jQuery
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -57,6 +58,12 @@ export class HomeComponent {
 
   trackByClientsTestomonial = (index: number, item: any) => {
     return item.id;
+  }
+
+  ngAfterViewInit() {
+    $(document).ready(function () {
+      $('.fancybox').fancybox();
+    });
   }
 
 

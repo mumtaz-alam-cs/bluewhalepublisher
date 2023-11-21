@@ -1,6 +1,5 @@
 import { Component, Renderer2, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { PopupService } from 'src/app/services/popup.service';
 
 @Component({
   selector: 'app-popup',
@@ -10,7 +9,7 @@ import { PopupService } from 'src/app/services/popup.service';
 export class PopupComponent implements OnInit {
   popupShown: boolean = false;
 
-  constructor(private renderer: Renderer2, private popupService: PopupService, private router: Router) { }
+  constructor(private renderer: Renderer2, private router: Router) { }
 
   ngOnInit() {
     // Display the popup after 5 seconds
